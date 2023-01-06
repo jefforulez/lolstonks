@@ -3,4 +3,4 @@
 
 https://lolstonks.com/
 
-![lol stonks](assets/elon_lol.jpg?raw=true "lol stonks")
+![lol stonks](/assets/elon_lol.jpg)
