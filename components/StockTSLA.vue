@@ -24,6 +24,7 @@ onMounted( () => {
 <template>
 <div>
   <iframe
+    title="$TSLA Stock Price LOL"
     id="st_d720369a1ab84d129b7b5e39fba6fc5c"
     frameborder="0"
     scrolling="no"

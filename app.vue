@@ -36,6 +36,8 @@ useHead({
   ],
   link: [
     { rel: 'canonical', href: 'https://www.lolstonks.com/' },
+    { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+    { rel: 'preconnect', href: 'https://resources.stockdio.com' },
   ],
   htmlAttrs: {
     lang: 'en',
@@ -59,7 +61,14 @@ useHead({
   <div class="column">
 
     <div class="item">
-      <img src="@/assets/elon.jpg" class="image" />
+      <nuxt-img
+        src="/lolstonks/elon_aca85b.jpg"
+        class="image"
+        fit="cover"
+        preload
+        height="600"
+        width="1000"
+        />
     </div>
 
     <div class="item">
@@ -133,7 +142,7 @@ h2 {
 }
 
 .item > .image {
-  width: 40vw;
+  width: 60vw;
 }
 
 /* tablet */
@@ -142,16 +151,16 @@ h2 {
 
 /* mobile landscape */
 @media (max-width: 767px) {
-}
-
-/* mobile portrait */
-@media (max-width: 478px) {
   .item {
     width: 90vw;
   }
   .item > .image {
     width: 90vw;
   }
+}
+
+/* mobile portrait */
+@media (max-width: 478px) {
 }
 
 </style>
