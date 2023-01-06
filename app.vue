@@ -6,7 +6,7 @@ import { Icon } from '@iconify/vue'
 import StockTSLA from '@/components/StockTSLA.vue'
 
 const title = 'lol stonks'
-const description = 'lol stonks'
+const description = "ok you know it's unfair, tell us what happened"
 
 const ogImageUrl = 'https://res.cloudinary.com/rulez-new-media/image/upload/c_fill,w_1200,h_630/e_overlay,l_text:Arial_200:lol%20stonks/lolstonks/elon_aca85b.jpg'
 const twitterImageUrl = 'https://res.cloudinary.com/rulez-new-media/image/upload/c_fill,w_1200,h_630/e_overlay,l_text:Arial_200:lol%20stonks/lolstonks/elon_aca85b.jpg'
@@ -68,6 +68,7 @@ useHead({
         preload
         height="600"
         width="1000"
+        alt="elon says lol stonks"
         />
     </div>
 
