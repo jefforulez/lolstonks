@@ -66,8 +66,6 @@ useHead({
         class="image"
         fit="cover"
         preload
-        height="600"
-        width="1000"
         alt="elon says lol stonks"
         />
     </div>
