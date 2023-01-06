@@ -1,4 +1,4 @@
 
 # lol stonks
 
-- https://lolstonks.com/
+https://lolstonks.com/
