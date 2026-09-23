@@ -1,0 +1,107 @@
+---
+import { Icon } from 'astro-icon/components'
+
+import BaseLayout from '../layouts/BaseLayout.astro'
+import StockTSLA from '../components/StockTSLA.astro'
+
+const title = 'lol stonks'
+const description = "ok you know it's unfair, tell us what happened"
+
+const ogImageUrl = 'https://res.cloudinary.com/rulez-new-media/image/upload/c_fill,w_1200,h_630/e_overlay,l_text:Arial_200:lol%20stonks/lolstonks/elon_aca85b.jpg'
+const twitterImageUrl = 'https://res.cloudinary.com/rulez-new-media/image/upload/c_fill,w_1200,h_630/e_overlay,l_text:Arial_200:lol%20stonks/lolstonks/elon_aca85b.jpg'
+
+const heroImageUrl = 'https://res.cloudinary.com/rulez-new-media/image/upload/f_auto,q_auto,c_fit/lolstonks/elon_aca85b.jpg'
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  ogImageUrl={ogImageUrl}
+  twitterImageUrl={twitterImageUrl}
+  preloadImageUrl={heroImageUrl}
+>
+  <div>
+    <h2>lol stonks</h2>
+
+    <div class="column">
+
+      <div class="item">
+        <img
+          src={heroImageUrl}
+          class="image"
+          alt="elon says lol stonks"
+        />
+      </div>
+
+      <div class="item">
+        <blockquote class="twitter-tweet">
+        <p lang="und" dir="ltr">lol</p>&mdash; Elon Musk (@elonmusk) <a href="https://twitter.com/elonmusk/status/1271016684489281536?ref_src=twsrc%5Etfw">June 11, 2020</a>
+        </blockquote>
+      </div>
+
+      <div class="item">
+        <StockTSLA />
+      </div>
+
+      <div class="item">
+        <blockquote class="twitter-tweet">
+        <p lang="en" dir="ltr">Stonks</p>&mdash; Elon Musk (@elonmusk) <a href="https://twitter.com/elonmusk/status/1271019765138518016?ref_src=twsrc%5Etfw">June 11, 2020</a>
+        </blockquote>
+      </div>
+
+      <div class="item">
+        <a href="https://github.com/jefforulez/lolstonks" target="_blank">
+          <Icon name="bi:graph-down-arrow" color="white" width="24" height="24" />
+        </a>
+      </div>
+
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  h2 {
+    margin: 5vh 0 5vh 0;
+    text-align: center;
+
+    font-size: 4vh;
+    font-weight: 300;
+    line-height: 1.25;
+  }
+
+  .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+  }
+
+  .item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+
+    width: 50%;
+    min-width: 50%;
+    margin-bottom: 5vh;
+  }
+
+  .item > .image {
+    width: 60vw;
+  }
+
+  /* mobile landscape */
+  @media (max-width: 767px) {
+    .item {
+      width: 90vw;
+    }
+    .item > .image {
+      width: 90vw;
+    }
+  }
+</style>

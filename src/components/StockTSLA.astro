@@ -1,0 +1,21 @@
+---
+const src = 'https://api.stockdio.com/visualization/financial/charts/v1/MarketOverviewChart?app-key=D2E326DBF1AA4B379BE1401AA1E52CC3&equities=TSLA;&includeIndices=false&includeCommodities=false&includeCurrencies=false&palette=Eggplant&title=Market%20Overview&onload=st_d720369a1ab84d129b7b5e39fba6fc5c'
+---
+
+<div>
+  <iframe
+    title="$TSLA Stock Price LOL"
+    id="st_d720369a1ab84d129b7b5e39fba6fc5c"
+    frameborder="0"
+    scrolling="no"
+    height="400"
+    width="100%"
+    src={src}
+  ></iframe>
+</div>
+
+<style>
+  div {
+    width: 100%;
+  }
+</style>
