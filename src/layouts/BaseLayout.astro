@@ -1,0 +1,60 @@
+---
+interface Props {
+  title: string
+  description: string
+  ogImageUrl: string
+  twitterImageUrl: string
+  preloadImageUrl?: string
+}
+
+const { title, description, ogImageUrl, twitterImageUrl, preloadImageUrl } = Astro.props
+
+const canonicalUrl = 'https://www.lolstonks.com/'
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <!-- opengraph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={title} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:twitter:site" content="@jefforulez" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={twitterImageUrl} />
+
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://resources.stockdio.com" />
+    {preloadImageUrl && <link rel="preload" as="image" href={preloadImageUrl} />}
+  </head>
+  <body>
+    <slot />
+    <script is:inline src="https://platform.twitter.com/widgets.js" defer></script>
+  </body>
+</html>
+
+<style is:global>
+  @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap");
+
+  body {
+    background: #000000;
+    color: #ffffff;
+    font-family: "Oswald", serif;
+  }
+</style>
