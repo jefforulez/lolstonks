@@ -9,6 +9,12 @@ updates:
       timezone: "America/Chicago"
     cooldown:
       default-days: 7
+    ignore:
+      # TypeScript 7 (native Go port) drops the JS compiler API that
+      # @astrojs/check / @volar/kit depend on (peer: typescript <7).
+      # Remove once Astro's check tooling supports TS 7.
+      - dependency-name: "typescript"
+        update-types: ["version-update:semver-major"]
     groups:
       minor-and-patch:
         applies-to: version-updates
